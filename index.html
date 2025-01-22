@@ -6,20 +6,26 @@
     <meta name="description" content="Reliable cleaning services for homes and businesses in Montreal and Laval.">
     <title>Your Cleaning Business</title>
     <link rel="stylesheet" href="styles.css">
-    <script>
-        // Function to toggle between languages
-        function toggleLanguage(language) {
-            const englishContent = document.getElementById('english-content');
-            const frenchContent = document.getElementById('french-content');
-            if (language === 'english') {
-                englishContent.style.display = 'block';
-                frenchContent.style.display = 'none';
-            } else {
-                englishContent.style.display = 'none';
-                frenchContent.style.display = 'block';
-            }
+<script>
+    // Function to toggle between languages
+    function toggleLanguage(language) {
+        const englishContent = document.getElementById('english-content');
+        const frenchContent = document.getElementById('french-content');
+        if (language === 'english') {
+            englishContent.style.display = 'block';
+            frenchContent.style.display = 'none';
+        } else {
+            englishContent.style.display = 'none';
+            frenchContent.style.display = 'block';
         }
-    </script>
+
+        // Fix for button navigation: Ensure the visible section is scrolled into view
+        const contactSection = document.querySelector('.contact');
+        if (contactSection) {
+            contactSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+</script>
 </head>
 <body>
 
