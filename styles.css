@@ -11,21 +11,42 @@ body {
     color: #333;
 }
 
+/* Language Switcher */
+.language-switcher {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.language-btn {
+    background-color: #008CBA;
+    color: white;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.language-btn:hover {
+    background-color: #0077a6;
+}
+
 /* Header Section */
 .hero {
     background-color: #008CBA;
     color: white;
-    padding: 50px 20px;
+    padding: 70px 20px;
     text-align: center;
 }
 
 .hero h1 {
-    font-size: 3em;
+    font-size: 3.5em;
     margin-bottom: 20px;
 }
 
 .hero p {
-    font-size: 1.2em;
+    font-size: 1.3em;
     margin-bottom: 30px;
 }
 
@@ -52,7 +73,7 @@ body {
 
 .services h2 {
     font-size: 2.5em;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 .service {
@@ -73,7 +94,7 @@ body {
 /* About Us Section */
 .about {
     background-color: #e8e8e8;
-    padding: 40px 20px;
+    padding: 50px 20px;
     text-align: center;
 }
 
@@ -92,7 +113,7 @@ body {
 /* Contact Form Section */
 .contact {
     background-color: #fff;
-    padding: 40px 20px;
+    padding: 50px 20px;
     text-align: center;
 }
 
@@ -120,7 +141,7 @@ body {
 .contact input, .contact textarea {
     width: 100%;
     padding: 10px;
-    font-size: 1em;
+    font-size: 1.1em;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
