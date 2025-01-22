@@ -4,11 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Reliable cleaning services for homes and businesses in Montreal and Laval.">
-    <title>NRS Ménage - Service de Nettoyage</title>
-    <!-- Linking CSS from the new template -->
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <title>Your Cleaning Business</title>
+    <link rel="stylesheet" href="styles.css">
     <script>
         // Function to toggle between languages
         function toggleLanguage(language) {
@@ -25,120 +22,132 @@
     </script>
 </head>
 <body>
-    <div class="hero_area">
-        <!-- Header section with language switcher -->
-        <header class="header_section">
-            <div class="container-fluid">
-                <div class="header_top">
-                    <div class="contact_nav">
-                        <a href="tel:+5148621261"><i class="fa fa-phone"></i> +514 862-1261</a>
-                        <a href="mailto:nrsmenage@hotmail.com"><i class="fa fa-envelope"></i> nrsmenage@hotmail.com</a>
-                    </div>
-                </div>
-                <nav class="navbar navbar-expand-lg">
-                    <a class="navbar-brand" href="#">NRS Ménage</a>
-                    <div class="language-switcher">
-                        <button onclick="toggleLanguage('english')">English</button>
-                        <button onclick="toggleLanguage('french')">Français</button>
-                    </div>
-                </nav>
-            </div>
-        </header>
+
+    <!-- Language Switcher -->
+    <div class="language-switcher">
+        <button onclick="toggleLanguage('english')" class="language-btn">English</button>
+        <button onclick="toggleLanguage('french')" class="language-btn">Français</button>
     </div>
 
-    <!-- French Content Section -->
-    <div id="french-content">
-        <header class="hero">
-            <h1>Votre service de nettoyage de confiance à Montreal et Laval</h1>
-            <p>Des services de nettoyage abordables, fiables et professionnels pour votre maison.</p>
-            <a href="#contact" class="btn btn-primary">Obtenez une estimation gratuite</a>
-        </header>
-        <section id="services" class="service_section">
-            <h2>Nos Services</h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <h3>Nettoyage Résidentiel</h3>
-                    <p>Nous proposons des services de nettoyage réguliers, profonds et ponctuels pour des maisons de toutes tailles.</p>
-                </div>
-                <div class="col-md-6">
-                    <h3>Nettoyage avant/après déménagement</h3>
-                    <p>Vous déménagez ? Laissez-nous nous occuper du nettoyage pour rendre votre transition plus facile.</p>
-                </div>
-            </div>
-        </section>
-        <section id="about" class="about_section">
-            <h2>À propos de nous</h2>
-            <p>Chez NRS Ménage, nous sommes fiers de fournir des services de nettoyage exceptionnels. Notre équipe est formée, digne de confiance et engagée à fournir les meilleurs résultats à chaque fois. Nous utilisons les meilleurs produits pour garantir un environnement sûr et sain pour votre maison.</p>
-        </section>
-        <section id="contact" class="contact_section">
-            <h2>Contactez-nous</h2>
-            <form action="submit_form.php" method="POST">
-                <div class="form-group">
-                    <label for="name">Nom:</label>
-                    <input type="text" id="name" name="name" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" rows="4" class="form-control" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Envoyer le message</button>
-            </form>
-        </section>
-    </div>
+    <!-- English Content Section (hidden by default) -->
+    <div id="english-content" style="display: none;">
 
-    <!-- English Content Section -->
-    <div id="english-content" style="display:none;">
+        <!-- Header Section (Hero Section) -->
         <header class="hero">
-            <h1>Your Trusted Cleaning Service in Montreal and Laval</h1>
-            <p>Affordable, reliable, and professional cleaning for your home.</p>
-            <a href="#contact" class="btn btn-primary">Get a Free Estimate</a>
+            <div class="hero-content">
+                <h1>Your Trusted Cleaning Service in Montreal and Laval</h1>
+                <p>Affordable, reliable, and professional cleaning for your home.</p>
+                <a href="#contact" class="cta-button">Get a Free Estimate</a>
+            </div>
         </header>
-        <section id="services" class="service_section">
+
+        <!-- Services Section -->
+        <section id="services" class="services">
             <h2>Our Services</h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <h3>Residential Cleaning</h3>
-                    <p>We offer regular, deep, and one-time cleaning services for homes of all sizes.</p>
-                </div>
-                <div class="col-md-6">
-                    <h3>Move-In/Move-Out Cleaning</h3>
-                    <p>Moving? Let us take care of the cleaning to make your transition easier.</p>
-                </div>
+            <div class="service">
+                <h3>Residential Cleaning</h3>
+                <p>We offer regular, deep, and one-time cleaning services for homes of all sizes.</p>
+            </div>
+            <div class="service">
+                <h3>Move-In/Move-Out Cleaning</h3>
+                <p>Moving? Let us take care of the cleaning to make your transition easier.</p>
             </div>
         </section>
-        <section id="about" class="about_section">
+
+        <!-- About Us Section -->
+        <section id="about" class="about">
             <h2>About Us</h2>
             <p>At NRS Menage, we take pride in providing exceptional cleaning services to our community. Our team is trained, trustworthy, and committed to delivering the best possible results every time. We use the best products to ensure a safe and healthy environment for your home.</p>
         </section>
-        <section id="contact" class="contact_section">
+
+        <!-- Contact Form Section -->
+        <section id="contact" class="contact">
             <h2>Contact Us</h2>
             <form action="submit_form.php" method="POST">
-                <div class="form-group">
+                <div>
                     <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" class="form-control" required>
+                    <input type="text" id="name" name="name" required>
                 </div>
-                <div class="form-group">
+                <div>
                     <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" class="form-control" required>
+                    <input type="email" id="email" name="email" required>
                 </div>
-                <div class="form-group">
+                <div>
                     <label for="message">Message:</label>
-                    <textarea id="message" name="message" rows="4" class="form-control" required></textarea>
+                    <textarea id="message" name="message" rows="4" required></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary">Send Message</button>
+                <div>
+                    <button type="submit">Send Message</button>
+                </div>
             </form>
         </section>
+
+        <!-- Footer Section -->
+        <footer>
+            <p>&copy; 2025 NRS Menage. All rights reserved.</p>
+            <p>Email: nrsmenage@hotmail.com | Phone: (514) 862-1261</p>
+        </footer>
     </div>
 
-    <!-- Footer -->
-    <footer class="footer_section">
-        <div class="container">
-            <p>&copy; 2025 NRS Ménage. Tous droits réservés.</p>
-        </div>
-    </footer>
+    <!-- French Content Section (visible by default) -->
+    <div id="french-content">
+
+        <!-- Header Section (Hero Section) -->
+        <header class="hero">
+            <div class="hero-content">
+                <h1>Votre service de nettoyage de confiance à Montreal et Laval</h1>
+                <p>Des services de nettoyage abordables, fiables et professionnels pour votre maison.</p>
+                <a href="#contact" class="cta-button">Obtenez une estimation gratuite</a>
+            </div>
+        </header>
+
+        <!-- Services Section -->
+        <section id="services" class="services">
+            <h2>Nos Services</h2>
+            <div class="service">
+                <h3>Nettoyage Résidentiel</h3>
+                <p>Nous proposons des services de nettoyage réguliers, profonds et ponctuels pour des maisons de toutes tailles.</p>
+            </div>
+            <div class="service">
+                <h3>Nettoyage avant/après déménagement</h3>
+                <p>Vous déménagez ? Laissez-nous nous occuper du nettoyage pour rendre votre transition plus facile.</p>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="about">
+            <h2>À propos de nous</h2>
+            <p>Chez NRS Menage, nous sommes fiers de fournir des services de nettoyage exceptionnels. Notre équipe est formée, digne de confiance et engagée à fournir les meilleurs résultats à chaque fois. Nous utilisons les meilleurs produits pour garantir un environnement sûr et sain pour votre maison.</p>
+        </section>
+
+        <!-- Contact Form Section -->
+        <section id="contact" class="contact">
+            <h2>Contactez-nous</h2>
+            <form action="submit_form.php" method="POST">
+                <div>
+                    <label for="name">Nom:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <div>
+                    <button type="submit">Envoyer le message</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Footer Section -->
+        <footer>
+            <p>&copy; 2025 NRS Menage. Tous droits réservés.</p>
+            <p>Email: nrsmenage@hotmail.com | Téléphone: (514) 862-1261</p>
+        </footer>
+    </div>
+
 </body>
 </html>
